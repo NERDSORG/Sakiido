@@ -1,6 +1,6 @@
 # sakiido
 
-把旧版 [Mutsumi](https://github.com/guilimao/Mutsumi) 的 `.mtm` 会话文件迁移到最新磁盘格式的小工具。
+把旧版 [Mutsumi](https://github.com/NERDSORG/Mutsumi) 的 `.mtm` 会话文件迁移到最新磁盘格式的小工具。
 
 
 ## 什么时候需要它
