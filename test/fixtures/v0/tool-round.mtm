@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "uuid": "22222222-2222-4222-8222-222222222222",
+    "name": "工具会话",
+    "created_at": "2025-06-02T10:00:00.000Z",
+    "parent_agent_id": null,
+    "allowed_uris": ["/home/user/project"],
+    "model": "kimi-for-coding",
+    "provider": "kimi-for-coding"
+  },
+  "context": [
+    { "role": "user", "content": "列出当前目录的文件" },
+    {
+      "role": "assistant",
+      "content": null,
+      "reasoning_content": "用户想看目录内容，我调用 list_dir。",
+      "tool_calls": [
+        {
+          "id": "call_1",
+          "type": "function",
+          "function": { "name": "list_dir", "arguments": "{\"path\":\".\"}" }
+        }
+      ]
+    },
+    { "role": "tool", "tool_call_id": "call_1", "name": "list_dir", "content": "file1.ts\nfile2.ts" },
+    {
+      "role": "assistant",
+      "content": "当前目录有两个文件：`file1.ts` 和 `file2.ts`。"
+    }
+  ]
+}

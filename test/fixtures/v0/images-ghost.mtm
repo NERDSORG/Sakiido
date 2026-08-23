@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "uuid": "66666666-6666-4666-8666-666666666666",
+    "name": "图片与幽灵块",
+    "created_at": "2025-06-06T10:00:00.000Z",
+    "parent_agent_id": null,
+    "allowed_uris": ["/"],
+    "model": "gpt-4o"
+  },
+  "context": [
+    {
+      "role": "user",
+      "content": [
+        { "type": "text", "text": "看这两张图：" },
+        { "type": "image_url", "image_url": { "url": "data:image/png;base64,aGVsbG8=" } },
+        { "type": "image_url", "image_url": { "url": "https://example.com/cat.png" } }
+      ],
+      "metadata": {
+        "last_ghost_block": {
+          "files": [
+            { "key": "src/a.ts", "version": 1, "content": "console.log(1);" }
+          ],
+          "tools": []
+        }
+      }
+    },
+    { "role": "assistant", "content": "图里是一只猫。" },
+    {
+      "role": "user",
+      "content": "再看这个文件",
+      "metadata": {
+        "last_ghost_block": { "files": "not-an-array" }
+      }
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "unmatched_1",
+      "name": "mystery_tool",
+      "content": "Error: no preceding tool call"
+    },
+    { "role": "assistant", "content": "完成。" }
+  ]
+}

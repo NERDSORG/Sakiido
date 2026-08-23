@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "uuid": "11111111-1111-4111-8111-111111111111",
+    "name": "聊天测试",
+    "created_at": "2025-06-01T10:00:00.000Z",
+    "parent_agent_id": null,
+    "allowed_uris": ["/"],
+    "model": "kimi-for-coding",
+    "provider": "kimi-for-coding",
+    "is_task_finished": true,
+    "agentType": "chat",
+    "activeRules": ["default.md"],
+    "activeSkills": ["summarize.md"],
+    "reasoning_effort": "medium",
+    "sub_agents_list": [],
+    "contextItems": [
+      { "type": "macro", "key": "ROLE", "content": "chat" }
+    ]
+  },
+  "context": [
+    { "role": "user", "content": "你好，介绍一下你自己" },
+    { "role": "assistant", "content": "我是 Mutsumi，一个多 Agent 笔记本环境。" }
+  ]
+}

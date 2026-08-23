@@ -1,0 +1,21 @@
+{
+  "name": "sakiido",
+  "version": "0.1.0",
+  "description": "Migrate Mutsumi .mtm session files to the latest on-disk format",
+  "type": "module",
+  "bin": {
+    "sakiido": "./src/cli.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=23.6"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^5.9.0"
+  }
+}
